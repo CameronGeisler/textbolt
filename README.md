@@ -4,6 +4,8 @@ A tiny, free text expander for Windows. Type a shortcut like `/thx` anywhere and
 
 I built it to replace Text Blaze, which caps snippets on its free plan and used about 560 MB of RAM on my PC. TextBolt is one ~200-line [AutoHotkey](https://www.autohotkey.com/) script that uses about 3 MB.
 
+![TextBolt search window: filter your snippets, edit the selected one, save or add new ones](screenshot.png)
+
 ## Install
 
 1. Install [AutoHotkey v2](https://www.autohotkey.com/) (free).

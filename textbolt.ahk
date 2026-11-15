@@ -126,7 +126,7 @@ FillList(select := "") {
         if (SearchList.GetText(A_Index, 1) = "/" select)
             row := A_Index
     if SearchList.GetCount()
-        SearchList.Modify(row, "Select Focus Vis")   ; fires ItemSelect, which loads the editor
+        SearchList.Modify(row, "Select Focus Vis"), LoadEditor(row)   ; ItemSelect doesn't fire for this, so load directly
     else
         SaveEditor(), Editor.Value := "", EditingName := ""
 }
@@ -207,7 +207,7 @@ MoveSel(d) {
         return
     row := Max(1, Min(n, (SearchList.GetNext() || 1) + d))
     SearchList.Modify(0, "-Select")
-    SearchList.Modify(row, "Select Focus Vis")
+    SearchList.Modify(row, "Select Focus Vis"), LoadEditor(row)
 }
 
 ; Reload automatically when a snippet file is added, edited, or removed outside TextBolt.
