@@ -1,0 +1,3 @@
+# Your own snippets stay on your computer. Only the examples are shared.
+snippets/*
+!snippets/examples/
